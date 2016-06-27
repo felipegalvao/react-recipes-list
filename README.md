@@ -8,35 +8,62 @@ Feel more than free to add any particular technique or algorithm at any point, w
 Instructions
 ------------
 
-- Clone this repo.
-- Create a new `dev` branch.
-- Do a Pull Request from `dev` to `master`, more on that right below.
-- Reply to the thread your having with our HR department telling us we can start reviewing your code.
-
-When you're finished, please do a pull request to `master` and make sure to write about your approach in the description. One or more of our engineers will then perform a code review. We will ask questions which we expect you to be able to answer. Code review is an important part of our process; this gives you as well as us a better understanding of how working together might be like.
+1. Clone this repo.
+2. Create a new `dev` branch, or create a fork of this repo.
+3. Write your code, in various commits so we can see your development timeline.
+4. When finished create a Pull Request with set-up instructions for us and explaining your solution.
+5. Reply to the thread your having with our HR department telling us that we may start reviewing your code.
 
 Requirements
 ------------
 
-- You MUST use HTML5, CSS3 and Vanilla (plain) JavaScript or AngularJS (preferred)
-- You MUST name all labels, variable names, etc., in english.
-- You SHOULD document your code. Don't explain code itself, but explain why this is a good method!
-- You CANNOT use other external libraries (JS or CSS) like jQuery, Twitter's Bootstrap, etc. other than AngularJS (Angular modules are also okay!)
-- You MUST use a CSS preprocessor language like SASS or LESS.
-- You CAN write server side code. If you feel skilled enough with writing an Express.js back-end or something Isomorphic/Universal even. We would appreciate to review that code as well.
-- You SHOULD write your own test suite (eg. Jasmine/QUnit) for a particular component that you’ve written.
-- You MUST automate all these processes with a task running utility (eg. Gulp) preferred is a self-written solution.
+- You *MUST* use HTML5, CSS3 and a JS framework or Vanilla JS
+- Your code *MUST* use english comments and/or names (don't over-comment your test, we know how to read code)
+- You *SHOULD NOT* use jQuery or Twitter's Bootstrap
+- You *SHOULD* use a CSS preprocessor or postprocessor
+- You *SHOULD* use some kind of server to serve your code, something like [http-server](https://github.com/indexzero/http-server) would do
+- You *MUST* automate all the compilation processes with a task running utility (eg. Gulp) preferred is a self-written solution
 
 Exercise
 --------
 
-Build an html page in which:
+In this test we will build a recipe review area.
 
-- The main content is loaded dynamically from the JSON file attached.
-- It has a login form for signing in with a valid email and a password.
-- Each recipe can be marked as favorite/unfavorite
-- Each recipe can be rated/unrated
-- Of course since there's no server side component, the POST request for this form will fail. This is expected. However, client side validation before submiting the form MUST be implemented.
-- You MUST implement a responsive design, at least for mobile and desktop viewports
+It will contain two pages:
+
+- [Login page](#login-page)
+- [Recipe review page](#recipe-review-page)
+
+#### Login page
+
+Implement a login page with a form to login, it doesn't have to actually log you in or do any checks, but things like e-mail validation are appreciated!
+
+#### Recipe review page
+
+This will show all the recipes that are attached.
+
+- All the recipes will be displayed here
+- The recipes have to be shown with all the data in the JSON displayed in a user-friendly way
+
+If the user is logged in:
+
+- Each recipe can favorited or unfavorited
+- Each recipe can be rated
+
+Evaluation Criteria
+-------------------
+
+- The app must run
+- Your app is lean and mean (small files that make the page look good)
+- You implemented a proper grid
+- Your app is responsive
+- Your app is well structured
+
+Bonus points
+
+- You wrote unit tests for your JavaScript
+- Your application is a SPA
+- You wrote server side code instead of using a utility application like `http-server`
+- You implement actual endpoints for the requests to the server
 
 Good luck, and have fun!
