@@ -51,6 +51,8 @@ This will show all the recipes that are attached.
 Evaluation Criteria
 -------------------
 
+IMPORTANT: You don't need to build any kind of backend for this exercise. No need to store data in any database. It's perfectly fine to approach this as a refined frontend prototype. That being said, if you do want to take the time to build a backend for it your efforts will be taken into account.
+
 - The app must run
 - Your app is lean and mean (small files that make the page look good)
 - You implemented a proper grid
