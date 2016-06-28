@@ -10,15 +10,16 @@ Instructions
 
 1. Clone this repo.
 2. Create a new `dev` branch, or create a fork of this repo.
-3. Write your code, in various commits so we can see your development timeline.
-4. When finished create a Pull Request with set-up instructions for us and explaining your solution.
+3. Write your code, in various commits so we can see your development timeline. We won't be looking at the time each task took you. We're much more interested in your train of thought!
+4. When finished, create a Pull Request with set-up instructions and an explanation for your solution.
 5. Reply to the thread your having with our HR department telling us that we may start reviewing your code.
 
 Requirements
 ------------
 
 - You *MUST* use HTML5, CSS3 and a JS framework or Vanilla JS
-- Your code *MUST* use english comments and/or names (don't over-comment your test, we know how to read code)
+- Your code *MUST* be in english (variable names, comments etc..)
+- You *MAY* comment your code wherever you feel necessary
 - You *SHOULD NOT* use jQuery or Twitter's Bootstrap
 - You *SHOULD* use a CSS preprocessor or postprocessor
 - You *SHOULD* use some kind of server to serve your code, something like [http-server](https://github.com/indexzero/http-server) would do
@@ -44,10 +45,7 @@ This will show all the recipes that are attached.
 
 - All the recipes will be displayed here
 - The recipes have to be shown with all the data in the JSON displayed in a user-friendly way
-
-If the user is logged in:
-
-- Each recipe can favorited or unfavorited
+- Each recipe can be favorited or unfavorited
 - Each recipe can be rated
 
 Evaluation Criteria
