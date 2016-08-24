@@ -3,7 +3,6 @@
     {
         "calories": "516 kcal",
         "carbos": "47 g",
-        "card": "https://api.hellofresh.com/recipe/card/533143aaff604d567f8b4571",
         "country": "GB",
         "deliverable_ingredients": [
             "375g Sweet Potatoes",
@@ -26,7 +25,7 @@
         "headline": "with Sweet Potato Wedges and Minted Snap Peas",
         "highlighted": true,
         "id": "533143aaff604d567f8b4571",
-        "image": "https://api.hellofresh.com/recipe/image/533143aaff604d567f8b4571",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/533143aaff604d567f8b4571.jpg",
         "incompatibilities": null,
         "ingredients": [
             "375g Sweet Potatoes",
@@ -51,7 +50,7 @@
         "proteins": "43 g",
         "rating": null,
         "ratings": null,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/533143aaff604d567f8b4571",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/533143aaff604d567f8b4571.jpg",
         "time": "PT35M",
         "undeliverable_ingredients": [],
         "user": {
@@ -66,7 +65,6 @@
     {
         "calories": "397 kcal",
         "carbos": "26 g",
-        "card": "https://api.hellofresh.com/recipe/card/53314247ff604d44808b4569",
         "country": "GB",
         "deliverable_ingredients": [
             "1 Lemon",
@@ -88,7 +86,7 @@
         "headline": "with Spinach and Lemon Couscous",
         "highlighted": true,
         "id": "53314247ff604d44808b4569",
-        "image": "https://api.hellofresh.com/recipe/image/53314247ff604d44808b4569",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/53314247ff604d44808b4569.jpg",
         "incompatibilities": null,
         "ingredients": [
             "1 Lemon",
@@ -112,7 +110,7 @@
         "proteins": "31 g",
         "rating": 1,
         "ratings": 1,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/53314247ff604d44808b4569",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/53314247ff604d44808b4569.jpg",
         "time": "PT30M",
         "undeliverable_ingredients": [],
         "user": {
@@ -127,7 +125,6 @@
     {
         "calories": "458 kcal",
         "carbos": "29 g",
-        "card": "https://api.hellofresh.com/recipe/card/53314276ff604d28828b456b",
         "country": "GB",
         "deliverable_ingredients": [
             "2 Fillets Sea Bream",
@@ -148,7 +145,7 @@
         "headline": "with Tomato Concasse and Crispy Potatoes",
         "highlighted": true,
         "id": "53314276ff604d28828b456b",
-        "image": "https://api.hellofresh.com/recipe/image/53314276ff604d28828b456b",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/53314276ff604d28828b456b.jpg",
         "incompatibilities": null,
         "ingredients": [
             "2 Fillets Sea Bream",
@@ -171,7 +168,7 @@
         "proteins": "29 g",
         "rating": 2.5,
         "ratings": 2,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/53314276ff604d28828b456b",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/53314276ff604d28828b456b.jpg",
         "time": "PT35M",
         "undeliverable_ingredients": [],
         "user": {
@@ -186,7 +183,6 @@
     {
         "calories": "717 kcal",
         "carbos": "44 g",
-        "card": "https://api.hellofresh.com/recipe/card/533143bfff604d44808b456a",
         "country": "GB",
         "deliverable_ingredients": [
             "2 Chicken Breasts",
@@ -204,7 +200,7 @@
         "headline": "with Roasted Rocket Potatoes",
         "highlighted": true,
         "id": "533143bfff604d44808b456a",
-        "image": "https://api.hellofresh.com/recipe/image/533143bfff604d44808b456a",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/533143bfff604d44808b456a.jpg",
         "incompatibilities": null,
         "ingredients": [
             "2 Chicken Breasts",
@@ -224,7 +220,7 @@
         "proteins": "67 g",
         "rating": null,
         "ratings": null,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/533143bfff604d44808b456a",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/533143bfff604d44808b456a.jpg",
         "time": "PT35M",
         "undeliverable_ingredients": [],
         "user": {
@@ -239,7 +235,6 @@
     {
         "calories": "751 kcal",
         "carbos": "105 g",
-        "card": "https://api.hellofresh.com/recipe/card/5331430fff604d557f8b456d",
         "country": "GB",
         "deliverable_ingredients": [
             " 3 Soft Wholemeal Wraps",
@@ -260,7 +255,7 @@
         "headline": "with Homemade Guacamole and Black Bean Salsa",
         "highlighted": true,
         "id": "5331430fff604d557f8b456d",
-        "image": "https://api.hellofresh.com/recipe/image/5331430fff604d557f8b456d",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/5331430fff604d557f8b456d.jpg",
         "incompatibilities": null,
         "ingredients": [
             " 3 Soft Wholemeal Wraps",
@@ -283,7 +278,7 @@
         "proteins": "35 g",
         "rating": 4,
         "ratings": 1,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/5331430fff604d557f8b456d",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/5331430fff604d557f8b456d.jpg",
         "time": "PT35M",
         "undeliverable_ingredients": [],
         "user": {
@@ -298,7 +293,6 @@
     {
         "calories": "689 kcal",
         "carbos": "84 g",
-        "card": "https://api.hellofresh.com/recipe/card/53314328ff604d4d808b456b",
         "country": "GB",
         "deliverable_ingredients": [
             "2 Cups Butternut Squash",
@@ -317,7 +311,7 @@
         "headline": "with Wild Rice, Feta and Pine Nuts",
         "highlighted": true,
         "id": "53314328ff604d4d808b456b",
-        "image": "https://api.hellofresh.com/recipe/image/53314328ff604d4d808b456b",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/53314328ff604d4d808b456b.jpg",
         "incompatibilities": null,
         "ingredients": [
             "2 Cups Butternut Squash",
@@ -338,7 +332,7 @@
         "proteins": "23 g",
         "rating": null,
         "ratings": null,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/53314328ff604d4d808b456b",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/53314328ff604d4d808b456b.jpg",
         "time": "PT40M",
         "undeliverable_ingredients": [],
         "user": {
@@ -353,7 +347,6 @@
     {
         "calories": "",
         "carbos": "",
-        "card": "https://api.hellofresh.com/recipe/card/53314343ff604d28828b456c",
         "country": "GB",
         "deliverable_ingredients": [
             "Fresh Gnocchi",
@@ -371,7 +364,7 @@
         "headline": "with Toasted Pine Nuts and Tenderstem Broccoli",
         "highlighted": true,
         "id": "53314343ff604d28828b456c",
-        "image": "https://api.hellofresh.com/recipe/image/53314343ff604d28828b456c",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/53314343ff604d28828b456c.jpg",
         "incompatibilities": null,
         "ingredients": [
             "Fresh Gnocchi",
@@ -391,7 +384,7 @@
         "proteins": "",
         "rating": null,
         "ratings": null,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/53314343ff604d28828b456c",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/53314343ff604d28828b456c.jpg",
         "time": "PT25M",
         "undeliverable_ingredients": [],
         "user": {
@@ -406,7 +399,6 @@
     {
         "calories": "790 kcal",
         "carbos": "100 g",
-        "card": "https://api.hellofresh.com/recipe/card/53314398ff604d6c7a8b456a",
         "country": "GB",
         "deliverable_ingredients": [
             "200g Mince Beef",
@@ -426,7 +418,7 @@
         "headline": "with Creamy Parmesan Polenta",
         "highlighted": true,
         "id": "53314398ff604d6c7a8b456a",
-        "image": "https://api.hellofresh.com/recipe/image/53314398ff604d6c7a8b456a",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/53314398ff604d6c7a8b456a.jpg",
         "incompatibilities": null,
         "ingredients": [
             "200g Mince Beef",
@@ -448,7 +440,7 @@
         "proteins": "39 g",
         "rating": null,
         "ratings": null,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/53314398ff604d6c7a8b456a",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/thumb/image/53314398ff604d6c7a8b456a.jpg",
         "time": "PT35M",
         "undeliverable_ingredients": [],
         "user": {
@@ -463,7 +455,6 @@
     {
         "calories": "556 kcal",
         "carbos": "62 g",
-        "card": "https://api.hellofresh.com/recipe/card/5252b20c301bbf46038b477e",
         "country": "GB",
         "deliverable_ingredients": [
             "Chicken Thighs",
@@ -487,7 +478,7 @@
         "headline": "and Sweet and Sour Noodles",
         "highlighted": true,
         "id": "5252b20c301bbf46038b477e",
-        "image": "https://api.hellofresh.com/recipe/image/5252b20c301bbf46038b477e",
+        "image": "https://d3hvwccx09j84u.cloudfront.net/web/image/5252b20c301bbf46038b477e.jpg",
         "incompatibilities": null,
         "ingredients": [
             "Chicken Thighs",
@@ -513,7 +504,7 @@
         "proteins": "32 g",
         "rating": 3.8,
         "ratings": 8,
-        "thumb": "https://api.hellofresh.com/recipe/thumb/5252b20c301bbf46038b477e",
+        "thumb": "https://d3hvwccx09j84u.cloudfront.net/web/image/5252b20c301bbf46038b477e.jpg",
         "time": "PT40M",
         "undeliverable_ingredients": [],
         "user": {
