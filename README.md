@@ -3,7 +3,7 @@ HelloFresh Dev Team - Frontend Developer Test
 
 The goal of this test is to assert your coding, UI, HTML and CSS skills (to some degree).
 
-Feel more than free to add any particular technique or algorithm at any point, which you think might enrich the overall quality of the end result. We expect you to be able to solve this test in a 2-4 hour time span (it is okay to take longer, we really want to be able to assess all your skills!).
+Feel more than free to add any particular technique or algorithm at any point, which you think might enrich the overall quality of the end result. Take as much time as you want on the test, please do over-engineer we would like to assess all your skills!
 
 Instructions
 ------------
