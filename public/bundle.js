@@ -9529,15 +9529,42 @@ var MainApp = function (_Component) {
     }
 
     _createClass(MainApp, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "grid" },
                 _react2.default.createElement(
-                    'p',
-                    null,
-                    'Main App Component'
+                    "div",
+                    { className: "container" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-2" },
+                            "Col 2"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-10" },
+                            "Col 10"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-5" },
+                            "Col 5"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-7" },
+                            "Col 7"
+                        )
+                    )
                 )
             );
         }
@@ -11475,7 +11502,7 @@ exports = module.exports = __webpack_require__(86)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #ddd; }\n  body p {\n    color: red; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px;\n  border: 1px solid red; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n", ""]);
 
 // exports
 
