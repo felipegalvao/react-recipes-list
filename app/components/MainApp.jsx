@@ -8,7 +8,7 @@ class MainApp extends Component {
         super(props);
 
         this.state = {
-            loggedIn: false
+            loggedIn: true
         };
     }
 

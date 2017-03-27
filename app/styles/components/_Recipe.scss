@@ -1,0 +1,51 @@
+.recipe-component {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h2 {
+        color: black;
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    p {
+        font-size: 0.8rem;
+        @media screen and (min-width: 425px) {
+            font-size: 1rem;
+        }
+    }
+    .recipe-headline {
+        color: $medium-gray;
+        font-style: italic;        
+        margin-bottom: 7px;
+        line-height: 1.5;
+    }
+    .recipe-creator {
+        line-height: 1.5;
+    }
+    .recipe-difficulty {
+        margin-top: 10px;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        color: $light-gray;
+        background-color: $light-gray;
+    }
+    .btn-see-more {
+        width: 100%;
+        margin-top: 10px;
+        background-color: #fff;
+        border: 1px solid $fresh-orange;
+        padding: 6px;
+        color: $fresh-orange;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: $light-gray;
+            transition: background-color 0.5s;
+        }
+    }
+    .col-recipe-divider {
+        padding: 0 12px;
+    }
+}

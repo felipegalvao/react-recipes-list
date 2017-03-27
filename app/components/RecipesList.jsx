@@ -36,7 +36,7 @@ class RecipesList extends Component {
                 <div className="row">
                     <div className="col-12">
                         <h1>Recipes List</h1>
-                        <div>{renderRecipes()}</div>
+                        {renderRecipes()}
                     </div>
                 </div>                
             </div>
