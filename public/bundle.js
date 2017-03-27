@@ -9511,6 +9511,14 @@ var _react = __webpack_require__(79);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Login = __webpack_require__(190);
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _RecipesList = __webpack_require__(191);
+
+var _RecipesList2 = _interopRequireDefault(_RecipesList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9522,49 +9530,54 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var MainApp = function (_Component) {
     _inherits(MainApp, _Component);
 
-    function MainApp() {
+    function MainApp(props) {
         _classCallCheck(this, MainApp);
 
-        return _possibleConstructorReturn(this, (MainApp.__proto__ || Object.getPrototypeOf(MainApp)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (MainApp.__proto__ || Object.getPrototypeOf(MainApp)).call(this, props));
+
+        _this.handleLogin = function () {
+            _this.setState({ loggedIn: true });
+        };
+
+        _this.state = {
+            loggedIn: false
+        };
+        return _this;
     }
 
     _createClass(MainApp, [{
-        key: "render",
+        key: 'render',
         value: function render() {
+            var _this2 = this;
+
+            var loggedIn = this.state.loggedIn;
+
+
+            var renderMainApp = function renderMainApp() {
+                if (loggedIn === false) {
+                    return _react2.default.createElement(
+                        'div',
+                        { className: 'row' },
+                        _react2.default.createElement('div', { className: 'col-3' }),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-6' },
+                            _react2.default.createElement(_Login2.default, { onLogin: _this2.handleLogin })
+                        ),
+                        _react2.default.createElement('div', { className: 'col-3' })
+                    );
+                } else {
+                    return _react2.default.createElement(_RecipesList2.default, null);
+                }
+            };
+
             return _react2.default.createElement(
-                "div",
-                { className: "grid" },
+                'div',
+                { className: 'grid' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "container" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-2" },
-                            "Col 2"
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-10" },
-                            "Col 10"
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "row" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-5" },
-                            "Col 5"
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "col-7" },
-                            "Col 7"
-                        )
-                    )
+                    'div',
+                    { className: 'container' },
+                    renderMainApp()
                 )
             );
         }
@@ -11502,7 +11515,7 @@ exports = module.exports = __webpack_require__(86)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px;\n  border: 1px solid red; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n", ""]);
 
 // exports
 
@@ -24355,6 +24368,137 @@ if(false) {
 
 module.exports = __webpack_require__(81);
 
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(79);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Login = function (_Component) {
+    _inherits(Login, _Component);
+
+    function Login() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, Login);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.handleLogin = function (event) {
+            event.preventDefault();
+            _this.props.onLogin();
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(Login, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "form",
+                    { onSubmit: this.handleLogin },
+                    _react2.default.createElement(
+                        "label",
+                        { "for": "email" },
+                        "Email",
+                        _react2.default.createElement("input", { type: "email", id: "email", name: "email", placeholder: "Insert your email", required: true })
+                    ),
+                    _react2.default.createElement(
+                        "label",
+                        { "for": "password" },
+                        "Password",
+                        _react2.default.createElement("input", { type: "password", id: "password", name: "password", placeholder: "Insert your password", required: true })
+                    ),
+                    _react2.default.createElement("input", { type: "submit", value: "Login" })
+                )
+            );
+        }
+    }]);
+
+    return Login;
+}(_react.Component);
+
+exports.default = Login;
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(79);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RecipesList = function (_Component) {
+    _inherits(RecipesList, _Component);
+
+    function RecipesList() {
+        _classCallCheck(this, RecipesList);
+
+        return _possibleConstructorReturn(this, (RecipesList.__proto__ || Object.getPrototypeOf(RecipesList)).apply(this, arguments));
+    }
+
+    _createClass(RecipesList, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    'Recipes List'
+                )
+            );
+        }
+    }]);
+
+    return RecipesList;
+}(_react.Component);
+
+exports.default = RecipesList;
 
 /***/ })
 /******/ ]);
