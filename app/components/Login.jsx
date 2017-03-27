@@ -9,6 +9,9 @@ class Login extends Component {
     render() {
         return (
             <div className="login-component">
+                <img src={require("../images/hellofresh-logo.svg")} />
+                <h1>HelloFresh Recipes List</h1>
+
                 <form onSubmit={this.handleLogin}>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>

@@ -31,7 +31,11 @@ module.exports = {
                 }, {
                     loader: "sass-loader"
                 }]
-            }       
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'url-loader?limit=25000'                
+            }
         ]
     }
 };

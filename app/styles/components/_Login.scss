@@ -1,4 +1,12 @@
 .login-component {
+    img {
+        display: block;
+        margin: 0 auto;        
+    }
+    h1 {
+        text-align: center;
+        color: $fresh-green-dark;
+    }
     .form-group {
         display: block;
         padding: 10px 0;
@@ -22,13 +30,13 @@
             padding: 10px 25px;
             color: #fff;
             border: 1px solid $fresh-green-medium;
-            width: 50%;
+            width: 100%;
             font-weight: bold;
             &:hover {
                 background-color: $fresh-green-dark;
                 border-color: $fresh-green-dark;
                 transition: background-color 0.5s, border-color 0.5s;
             }
-        }
+        }        
     }
 }
