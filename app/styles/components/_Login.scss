@@ -32,6 +32,7 @@
             border: 1px solid $fresh-green-medium;
             width: 100%;
             font-weight: bold;
+            transition: background-color 0.5s, border-color 0.5s;
             &:hover {
                 background-color: $fresh-green-dark;
                 border-color: $fresh-green-dark;

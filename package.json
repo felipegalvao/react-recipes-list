@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hellofreshdevtests/felipegalvao-frontend-test#readme",
   "dependencies": {
+    "axios": "^0.15.3",
     "express": "^4.15.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
