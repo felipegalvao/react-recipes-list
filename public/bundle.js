@@ -26136,10 +26136,21 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Recipe = function (_Component) {
     _inherits(Recipe, _Component);
 
-    function Recipe() {
+    function Recipe(props) {
         _classCallCheck(this, Recipe);
 
-        return _possibleConstructorReturn(this, (Recipe.__proto__ || Object.getPrototypeOf(Recipe)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Recipe.__proto__ || Object.getPrototypeOf(Recipe)).call(this, props));
+
+        _this.handleShowHideMoreInfo = function () {
+            _this.setState({
+                moreInfoVisible: !_this.state.moreInfoVisible
+            });
+        };
+
+        _this.state = {
+            moreInfoVisible: false
+        };
+        return _this;
     }
 
     _createClass(Recipe, [{
@@ -26150,8 +26161,28 @@ var Recipe = function (_Component) {
                 thumb = _props.thumb,
                 headline = _props.headline,
                 user = _props.user,
-                difficulty = _props.difficulty;
+                difficulty = _props.difficulty,
+                description = _props.description;
+            var moreInfoVisible = this.state.moreInfoVisible;
 
+
+            var renderMoreInfo = function renderMoreInfo() {
+                if (moreInfoVisible === true) {
+                    return _react2.default.createElement(
+                        "div",
+                        { className: "row" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "col-12 col-sm-12" },
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                description
+                            )
+                        )
+                    );
+                }
+            };
 
             return _react2.default.createElement(
                 "div",
@@ -26186,11 +26217,12 @@ var Recipe = function (_Component) {
                         ),
                         _react2.default.createElement(
                             "button",
-                            { className: "btn-see-more" },
+                            { className: "btn-see-more", onClick: this.handleShowHideMoreInfo },
                             "See More"
                         )
                     )
                 ),
+                renderMoreInfo(),
                 _react2.default.createElement(
                     "div",
                     { className: "row" },
