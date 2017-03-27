@@ -8,15 +8,19 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
+            <div className="login-component">
                 <form onSubmit={this.handleLogin}>
-                    <label for="email">Email
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Insert your email" required />
-                    </label>
-                    <label for="password">Password
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Insert your password" required />
-                    </label>
-                    <input type="submit" value="Login" />
+                    </div>
+                    <div className="form-group">
+                        <button>Log In</button>
+                    </div>
                 </form>
             </div>
         );

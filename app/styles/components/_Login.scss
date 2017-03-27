@@ -1,0 +1,34 @@
+.login-component {
+    .form-group {
+        display: block;
+        padding: 10px 0;
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            line-height: 1.5;
+            &:focus {
+                border-color: $fresh-green-medium;
+                outline: none;
+            }
+        }
+        button {
+            background-color: $fresh-green-medium;
+            padding: 10px 25px;
+            color: #fff;
+            border: 1px solid $fresh-green-medium;
+            width: 50%;
+            font-weight: bold;
+            &:hover {
+                background-color: $fresh-green-dark;
+                border-color: $fresh-green-dark;
+                transition: background-color 0.5s, border-color 0.5s;
+            }
+        }
+    }
+}

@@ -11515,7 +11515,7 @@ exports = module.exports = __webpack_require__(86)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n\n/* Colors */\n.login-component .form-group {\n  display: block;\n  padding: 10px 0; }\n  .login-component .form-group label {\n    display: block;\n    margin-bottom: 5px; }\n  .login-component .form-group input {\n    width: 100%;\n    padding: 5px;\n    border-radius: 5px;\n    border: 1px solid gray;\n    line-height: 1.5; }\n    .login-component .form-group input:focus {\n      border-color: #91c11e;\n      outline: none; }\n  .login-component .form-group button {\n    background-color: #91c11e;\n    padding: 10px 25px;\n    color: #fff;\n    border: 1px solid #91c11e;\n    width: 50%;\n    font-weight: bold; }\n    .login-component .form-group button:hover {\n      background-color: #709517;\n      border-color: #709517;\n      transition: background-color 0.5s, border-color 0.5s; }\n\nbody {\n  font-family: 'Droid Sans', sans-serif; }\n", ""]);
 
 // exports
 
@@ -24419,23 +24419,39 @@ var Login = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                null,
+                { className: "login-component" },
                 _react2.default.createElement(
                     "form",
                     { onSubmit: this.handleLogin },
                     _react2.default.createElement(
-                        "label",
-                        { "for": "email" },
-                        "Email",
+                        "div",
+                        { className: "form-group" },
+                        _react2.default.createElement(
+                            "label",
+                            { htmlFor: "email" },
+                            "Email"
+                        ),
                         _react2.default.createElement("input", { type: "email", id: "email", name: "email", placeholder: "Insert your email", required: true })
                     ),
                     _react2.default.createElement(
-                        "label",
-                        { "for": "password" },
-                        "Password",
+                        "div",
+                        { className: "form-group" },
+                        _react2.default.createElement(
+                            "label",
+                            { htmlFor: "password" },
+                            "Password"
+                        ),
                         _react2.default.createElement("input", { type: "password", id: "password", name: "password", placeholder: "Insert your password", required: true })
                     ),
-                    _react2.default.createElement("input", { type: "submit", value: "Login" })
+                    _react2.default.createElement(
+                        "div",
+                        { className: "form-group" },
+                        _react2.default.createElement(
+                            "button",
+                            null,
+                            "Log In"
+                        )
+                    )
                 )
             );
         }
