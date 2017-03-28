@@ -11712,7 +11712,7 @@ exports = module.exports = __webpack_require__(88)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n\n@media screen and (min-width: 600px) {\n  .grid {\n    /* For tablets: */ }\n    .grid .col-m-1 {\n      width: 8.333%; }\n    .grid .col-m-2 {\n      width: 16.66%; }\n    .grid .col-m-3 {\n      width: 25%; }\n    .grid .col-m-4 {\n      width: 33.33%; }\n    .grid .col-m-5 {\n      width: 41.66%; }\n    .grid .col-m-6 {\n      width: 50%; }\n    .grid .col-m-7 {\n      width: 58.33%; }\n    .grid .col-m-8 {\n      width: 66.66%; }\n    .grid .col-m-9 {\n      width: 75%; }\n    .grid .col-m-10 {\n      width: 83.33%; }\n    .grid .col-m-11 {\n      width: 91.66%; }\n    .grid .col-m-12 {\n      width: 100%; } }\n\n@media screen and (max-width: 425px) {\n  .grid {\n    /* For phones: */ }\n    .grid .col-sm-1 {\n      width: 8.33%; }\n    .grid .col-sm-2 {\n      width: 16.66%; }\n    .grid .col-sm-3 {\n      width: 25%; }\n    .grid .col-sm-4 {\n      width: 33.33%; }\n    .grid .col-sm-5 {\n      width: 41.66%; }\n    .grid .col-sm-6 {\n      width: 50%; }\n    .grid .col-sm-7 {\n      width: 58.33%; }\n    .grid .col-sm-8 {\n      width: 66.66%; }\n    .grid .col-sm-9 {\n      width: 75%; }\n    .grid .col-sm-10 {\n      width: 83.33%; }\n    .grid .col-sm-11 {\n      width: 91.66%; }\n    .grid .col-sm-12 {\n      width: 100%; } }\n\n/* Colors */\n.login-component img {\n  display: block;\n  margin: 0 auto; }\n\n.login-component h1 {\n  text-align: center;\n  color: #709517;\n  font-size: 1.5rem;\n  margin: 20px 0; }\n\n.login-component .form-group {\n  display: block;\n  padding: 10px 0; }\n  .login-component .form-group label {\n    display: block;\n    margin-bottom: 5px; }\n  .login-component .form-group input {\n    width: 100%;\n    padding: 5px;\n    border: 1px solid gray;\n    line-height: 1.5; }\n    .login-component .form-group input:focus {\n      border-color: #91c11e;\n      outline: none; }\n  .login-component .form-group button {\n    background-color: #91c11e;\n    padding: 10px 25px;\n    color: #fff;\n    border: 1px solid #91c11e;\n    width: 100%;\n    font-weight: bold;\n    transition: background-color 0.5s, border-color 0.5s; }\n    .login-component .form-group button:hover {\n      background-color: #709517;\n      border-color: #709517;\n      transition: background-color 0.5s, border-color 0.5s; }\n\n.recipes-list-component h1 {\n  font-size: 1.5rem;\n  text-align: center;\n  color: #91c11e;\n  margin-bottom: 20px; }\n\n.recipe-component img {\n  max-width: 100%;\n  height: auto; }\n\n.recipe-component h2 {\n  color: black;\n  font-size: 1rem;\n  margin-bottom: 4px; }\n\n.recipe-component p {\n  font-size: 0.8rem; }\n  @media screen and (min-width: 425px) {\n    .recipe-component p {\n      font-size: 1rem; } }\n\n.recipe-component .recipe-headline {\n  color: #999999;\n  font-style: italic;\n  margin-bottom: 7px;\n  line-height: 1.5; }\n\n.recipe-component .recipe-creator {\n  line-height: 1.5; }\n\n.recipe-component .recipe-difficulty {\n  margin-top: 10px; }\n\n.recipe-component hr {\n  border: none;\n  height: 1px;\n  color: #e6e6e6;\n  background-color: #e6e6e6; }\n\n.recipe-component .btn-see-more {\n  width: 100%;\n  margin-top: 10px;\n  background-color: #fff;\n  border: 1px solid #e65100;\n  padding: 6px;\n  color: #e65100;\n  transition: background-color 0.5s; }\n  .recipe-component .btn-see-more:hover {\n    background-color: #e6e6e6;\n    transition: background-color 0.5s; }\n\n.recipe-component .col-recipe-divider {\n  padding: 0 12px; }\n\nbody {\n  font-family: 'Droid Sans', sans-serif; }\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\n.grid [class*=\"col-\"] {\n  width: 100%;\n  float: left;\n  padding: 12px;\n  min-height: 1px; }\n\n.grid .container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto; }\n\n.grid .row:after {\n  content: \"\";\n  clear: both;\n  display: table; }\n\n@media screen and (min-width: 768px) {\n  .grid .col-1 {\n    width: 8.333%; }\n  .grid .col-2 {\n    width: 16.666%; }\n  .grid .col-3 {\n    width: 25%; }\n  .grid .col-4 {\n    width: 33.333%; }\n  .grid .col-5 {\n    width: 41.666%; }\n  .grid .col-6 {\n    width: 50%; }\n  .grid .col-7 {\n    width: 58.333%; }\n  .grid .col-8 {\n    width: 66.666%; }\n  .grid .col-9 {\n    width: 75%; }\n  .grid .col-10 {\n    width: 83.333%; }\n  .grid .col-11 {\n    width: 91.666%; }\n  .grid .col-12 {\n    width: 100%; } }\n\n@media screen and (min-width: 600px) {\n  .grid {\n    /* For tablets: */ }\n    .grid .col-m-1 {\n      width: 8.333%; }\n    .grid .col-m-2 {\n      width: 16.66%; }\n    .grid .col-m-3 {\n      width: 25%; }\n    .grid .col-m-4 {\n      width: 33.33%; }\n    .grid .col-m-5 {\n      width: 41.66%; }\n    .grid .col-m-6 {\n      width: 50%; }\n    .grid .col-m-7 {\n      width: 58.33%; }\n    .grid .col-m-8 {\n      width: 66.66%; }\n    .grid .col-m-9 {\n      width: 75%; }\n    .grid .col-m-10 {\n      width: 83.33%; }\n    .grid .col-m-11 {\n      width: 91.66%; }\n    .grid .col-m-12 {\n      width: 100%; } }\n\n@media screen and (max-width: 425px) {\n  .grid {\n    /* For phones: */ }\n    .grid .col-sm-1 {\n      width: 8.33%; }\n    .grid .col-sm-2 {\n      width: 16.66%; }\n    .grid .col-sm-3 {\n      width: 25%; }\n    .grid .col-sm-4 {\n      width: 33.33%; }\n    .grid .col-sm-5 {\n      width: 41.66%; }\n    .grid .col-sm-6 {\n      width: 50%; }\n    .grid .col-sm-7 {\n      width: 58.33%; }\n    .grid .col-sm-8 {\n      width: 66.66%; }\n    .grid .col-sm-9 {\n      width: 75%; }\n    .grid .col-sm-10 {\n      width: 83.33%; }\n    .grid .col-sm-11 {\n      width: 91.66%; }\n    .grid .col-sm-12 {\n      width: 100%; } }\n\n/* Colors */\n.login-component img {\n  display: block;\n  margin: 0 auto; }\n\n.login-component h1 {\n  text-align: center;\n  color: #709517;\n  font-size: 1.5rem;\n  margin: 20px 0; }\n\n.login-component .form-group {\n  display: block;\n  padding: 10px 0; }\n  .login-component .form-group label {\n    display: block;\n    margin-bottom: 5px; }\n  .login-component .form-group input {\n    width: 100%;\n    padding: 5px;\n    border: 1px solid gray;\n    line-height: 1.5; }\n    .login-component .form-group input:focus {\n      border-color: #91c11e;\n      outline: none; }\n  .login-component .form-group button {\n    background-color: #91c11e;\n    padding: 10px 25px;\n    color: #fff;\n    border: 1px solid #91c11e;\n    width: 100%;\n    font-weight: bold;\n    transition: background-color 0.5s, border-color 0.5s; }\n    .login-component .form-group button:hover {\n      background-color: #709517;\n      border-color: #709517;\n      transition: background-color 0.5s, border-color 0.5s; }\n\n.recipes-list-component h1 {\n  font-size: 1.5rem;\n  text-align: center;\n  color: #91c11e;\n  margin-bottom: 20px; }\n\n.recipe-component * {\n  font-size: 0.9rem; }\n\n.recipe-component img {\n  max-width: 100%;\n  height: auto; }\n\n.recipe-component h2 {\n  color: black;\n  font-size: 1.1rem;\n  margin-bottom: 4px; }\n\n.recipe-component .fa-heart-o {\n  margin-left: 5px;\n  color: #999999;\n  font-size: 1.1rem; }\n\n.recipe-component p {\n  font-size: 0.9rem; }\n  @media screen and (min-width: 425px) {\n    .recipe-component p {\n      font-size: 1rem; } }\n\n.recipe-component .recipe-headline {\n  color: #999999;\n  font-style: italic;\n  margin-bottom: 7px;\n  line-height: 1.5; }\n\n.recipe-component .recipe-creator {\n  line-height: 1.5; }\n\n.recipe-component .recipe-difficulty {\n  margin-top: 10px; }\n\n.recipe-component hr {\n  border: none;\n  height: 1px;\n  color: #e6e6e6;\n  background-color: #e6e6e6; }\n\n.recipe-component .p-see-more {\n  margin-top: 15px;\n  font-size: 1.0rem;\n  color: #91c11e;\n  cursor: pointer; }\n\n.recipe-component .col-recipe-divider {\n  padding: 0 12px; }\n\n.recipe-component .btn-favorite {\n  width: 100%;\n  margin: 0 auto;\n  display: block;\n  background-color: #91c11e;\n  border: 1px solid #91c11e;\n  padding: 10px;\n  color: #fff;\n  font-size: 1.1rem;\n  transition: background-color 0.5s; }\n  .recipe-component .btn-favorite:hover {\n    background-color: #709517;\n    transition: background-color 0.5s; }\n\n.recipe-component .p-recipe-description {\n  line-height: 1.5;\n  text-align: justify; }\n\n.recipe-component .col-rating p {\n  font-size: 1rem; }\n  .recipe-component .col-rating p:nth-child(1) {\n    margin-bottom: 7px; }\n\n.recipe-component .col-rating i {\n  font-size: 1.3rem; }\n\n.recipe-component ul {\n  list-style: square; }\n  .recipe-component ul li {\n    padding: 4px 0;\n    margin-left: 12px; }\n\nbody {\n  font-family: 'Droid Sans', sans-serif; }\n\n.text-center {\n  text-align: center; }\n", ""]);
 
 // exports
 
@@ -26156,30 +26156,118 @@ var Recipe = function (_Component) {
     _createClass(Recipe, [{
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             var _props = this.props,
                 name = _props.name,
                 thumb = _props.thumb,
                 headline = _props.headline,
                 user = _props.user,
                 difficulty = _props.difficulty,
-                description = _props.description;
+                description = _props.description,
+                ingredients = _props.ingredients;
             var moreInfoVisible = this.state.moreInfoVisible;
 
+
+            var renderIngredients = function renderIngredients() {
+                return ingredients.map(function (ingredient) {
+                    return _react2.default.createElement(
+                        "li",
+                        null,
+                        ingredient
+                    );
+                });
+            };
 
             var renderMoreInfo = function renderMoreInfo() {
                 if (moreInfoVisible === true) {
                     return _react2.default.createElement(
                         "div",
-                        { className: "row" },
+                        null,
                         _react2.default.createElement(
                             "div",
-                            { className: "col-12 col-sm-12" },
+                            { className: "row" },
                             _react2.default.createElement(
-                                "p",
-                                null,
-                                description
+                                "div",
+                                { className: "col-6 col-sm-6 col-rating text-center" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Current Rating"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" })
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-6 col-sm-6 col-rating text-center" },
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    "Give Your Rating"
+                                ),
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" }),
+                                    _react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true" })
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-12 col-sm-12" },
+                                _react2.default.createElement(
+                                    "p",
+                                    { className: "p-recipe-description" },
+                                    description
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "row" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "col-12 col-sm-12" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    null,
+                                    renderIngredients()
+                                )
                             )
                         )
+                    );
+                }
+            };
+
+            var renderSeeMoreElement = function renderSeeMoreElement() {
+                if (moreInfoVisible === true) {
+                    return _react2.default.createElement(
+                        "p",
+                        { className: "p-see-more", onClick: _this2.handleShowHideMoreInfo },
+                        "See Less ",
+                        _react2.default.createElement("i", { className: "fa fa-caret-up", "aria-hidden": "true" })
+                    );
+                } else {
+                    return _react2.default.createElement(
+                        "p",
+                        { className: "p-see-more", onClick: _this2.handleShowHideMoreInfo },
+                        "See More ",
+                        _react2.default.createElement("i", { className: "fa fa-caret-down", "aria-hidden": "true" })
                     );
                 }
             };
@@ -26192,16 +26280,18 @@ var Recipe = function (_Component) {
                     { className: "row row-recipe-main-info" },
                     _react2.default.createElement(
                         "div",
-                        { className: "col-6 col-sm-6" },
+                        { className: "col-6 col-sm-12" },
                         _react2.default.createElement("img", { src: thumb })
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "col-6 col-sm-6" },
+                        { className: "col-6 col-sm-12" },
                         _react2.default.createElement(
                             "h2",
                             null,
-                            name
+                            name,
+                            " ",
+                            _react2.default.createElement("i", { className: "fa fa-heart-o", "aria-hidden": "true" })
                         ),
                         _react2.default.createElement(
                             "p",
@@ -26215,11 +26305,7 @@ var Recipe = function (_Component) {
                             " Difficulty: ",
                             difficulty
                         ),
-                        _react2.default.createElement(
-                            "button",
-                            { className: "btn-see-more", onClick: this.handleShowHideMoreInfo },
-                            "See More"
-                        )
+                        renderSeeMoreElement()
                     )
                 ),
                 renderMoreInfo(),
