@@ -128,6 +128,11 @@ class Recipe extends Component {
                                 </table>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-12 col-sm-12">
+                                {renderSeeMoreElement()}
+                            </div>
+                        </div>
                     </div>
                 )
             }
