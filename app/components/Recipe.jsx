@@ -94,29 +94,31 @@ class Recipe extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-6 col-sm-6">
+                            <div className="col-6 col-sm-6 col-ingredients-list">
+                                <p>Ingredients</p>
                                 <ul>
                                     {renderIngredients()}
                                 </ul>
                             </div>
-                            <div className="col-6 col-sm-6">
+                            <div className="col-6 col-sm-6 col-nutritional-info">
+                                <p>Nutritional Table</p>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>Calories</td>
-                                            <td>{calories}</td>
+                                            <td>{calories === "" ? "N/A" : calories}</td>
                                         </tr>
                                         <tr>
                                             <td>Carbos</td>
-                                            <td>{carbos}</td>
+                                            <td>{carbos === "" ? "N/A" : carbos}</td>
                                         </tr>
                                         <tr>
                                             <td>Fats</td>
-                                            <td>{fats}</td>
+                                            <td>{fats === "" ? "N/A" : fats}</td>
                                         </tr>
                                         <tr>
                                             <td>Fibers</td>
-                                            <td>{fibers}</td>
+                                            <td>{fibers === "" ? "N/A" : fibers}</td>
                                         </tr>
                                         <tr>
                                             <td>Proteins</td>

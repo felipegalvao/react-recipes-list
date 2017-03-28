@@ -114,4 +114,13 @@
             padding: 0;
         }
     }
+
+    .col-nutritional-info, .col-ingredients-list {
+        p {
+            line-height: 1.3;
+            margin: 4px 0 10px;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
 }
