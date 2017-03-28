@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
-import api from '../api/api.jsx';
 
 import Recipe from './Recipe.jsx';
 
 class RecipesList extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            recipes: []
-        };
     }
 
-    componentWillMount() {
-        var that = this;
+    
 
-        api.getRecipes().then(function (recipes) {
-            that.setState({
-                recipes: recipes
-            });
-        })
-    }
+    
 
     render() {
-        var {recipes} = this.state;
+        var {recipes} = this.props;
 
         var renderRecipes = () => {
             return recipes.map((recipe) => {
-                return <Recipe key={recipe.id} {...recipe} />
+                return <Recipe key={recipe.id} {...recipe} onFavorite={this.props.onFavorite} />
             })            
         }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import api from '../api/api.jsx';
 import Login from './Login.jsx';
 import RecipesList from './RecipesList.jsx';
 
@@ -8,16 +9,46 @@ class MainApp extends Component {
         super(props);
 
         this.state = {
-            loggedIn: true
+            loggedIn: true,
+            recipes: []
         };
+    }
+
+    componentWillMount() {
+        var that = this;
+
+        api.getRecipes().then(function (recipes) {
+            var parsedRecipes = recipes.map((recipe) => {
+                return {
+                    ...recipe,
+                    isFavorite: false
+                }
+            })
+
+            that.setState({
+                recipes: parsedRecipes
+            });
+        })
     }
 
     handleLogin = () => {
         this.setState({loggedIn: true});
     }
 
+    handleFavorite = (id) => {        
+        var updatedRecipes = this.state.recipes.map((recipe) => {
+            if (recipe.id === id) {
+                recipe.isFavorite = !recipe.isFavorite;
+            }
+
+            return recipe;
+        })
+
+        this.setState({recipes: updatedRecipes});
+    }
+
     render() {
-        var {loggedIn} = this.state;
+        var {loggedIn, recipes} = this.state;
 
         var renderMainApp = () => {
             if (loggedIn === false) {
@@ -31,7 +62,7 @@ class MainApp extends Component {
                     </div>
                 )
             } else {
-                return (<RecipesList/>)
+                return (<RecipesList recipes={recipes} onFavorite={this.handleFavorite} />)
             }
         }
 
