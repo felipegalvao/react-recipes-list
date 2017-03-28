@@ -34,6 +34,7 @@
         .col-10 {width: 83.333%;}
         .col-11 {width: 91.666%;}
         .col-12 {width: 100%;}
+        .col-hide {display: none;}
     }
 
     @media screen and (min-width: 600px) {
@@ -50,6 +51,7 @@
         .col-m-10 {width: 83.33%;}
         .col-m-11 {width: 91.66%;}
         .col-m-12 {width: 100%;}
+        .col-m-hide {display: none;}
     }
 
     @media screen and (max-width: 425px) {
@@ -66,6 +68,7 @@
         .col-sm-10 {width: 83.33%;}
         .col-sm-11 {width: 91.66%;}
         .col-sm-12 {width: 100%;}
+        .col-sm-hide {display: none;}
     }
 }
 

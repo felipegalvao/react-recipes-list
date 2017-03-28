@@ -19,7 +19,7 @@ class RecipesList extends Component {
         return (
             <div className="recipes-list-component">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-sm-12">
                         <h1>Recipes List</h1>
                         {renderRecipes()}
                     </div>
