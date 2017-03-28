@@ -11192,6 +11192,26 @@ var MainApp = function (_Component) {
             _this.setState({ recipes: updatedRecipes });
         };
 
+        _this.handleSetRating = function (id, rating) {
+            var updatedRecipes = _this.state.recipes.map(function (recipe) {
+                if (recipe.id === id) {
+                    // If user never voted, increase the number of ratings
+                    if (recipe.userRating === null) {
+                        recipe.rating = (recipe.rating * recipe.ratings + rating) / (recipe.ratings + 1);
+                        recipe.ratings = recipe.ratings + 1;
+                        // If user already voted and is now changing its vote
+                    } else {
+                        recipe.rating = (recipe.rating * recipe.ratings - recipe.userRating + rating) / recipe.ratings;
+                    }
+                    recipe.userRating = rating;
+                }
+
+                return recipe;
+            });
+
+            _this.setState({ recipes: updatedRecipes });
+        };
+
         _this.state = {
             loggedIn: true,
             recipes: []
@@ -11207,7 +11227,8 @@ var MainApp = function (_Component) {
             _api2.default.getRecipes().then(function (recipes) {
                 var parsedRecipes = recipes.map(function (recipe) {
                     return _extends({}, recipe, {
-                        isFavorite: false
+                        isFavorite: false,
+                        userRating: null
                     });
                 });
 
@@ -11240,7 +11261,7 @@ var MainApp = function (_Component) {
                         _react2.default.createElement('div', { className: 'col-4' })
                     );
                 } else {
-                    return _react2.default.createElement(_RecipesList2.default, { recipes: recipes, onFavorite: _this2.handleFavorite });
+                    return _react2.default.createElement(_RecipesList2.default, { recipes: recipes, onFavorite: _this2.handleFavorite, onSetRating: _this2.handleSetRating });
                 }
             };
 
@@ -11408,15 +11429,25 @@ var Recipe = function (_Component) {
                                         "fieldset",
                                         { className: "rating" },
                                         _react2.default.createElement("input", { type: "radio", id: "star5", name: "rating", value: "5" }),
-                                        _react2.default.createElement("label", { className: "full", htmlFor: "star5", title: "Awesome - 5 stars" }),
+                                        _react2.default.createElement("label", { onClick: function onClick() {
+                                                return _this2.props.onSetRating(id, 5);
+                                            }, className: "full", htmlFor: "star5", title: "Awesome - 5 stars" }),
                                         _react2.default.createElement("input", { type: "radio", id: "star4", name: "rating", value: "4" }),
-                                        _react2.default.createElement("label", { className: "full", htmlFor: "star4", title: "Pretty good - 4 stars" }),
+                                        _react2.default.createElement("label", { onClick: function onClick() {
+                                                return _this2.props.onSetRating(id, 4);
+                                            }, className: "full", htmlFor: "star4", title: "Pretty good - 4 stars" }),
                                         _react2.default.createElement("input", { type: "radio", id: "star3", name: "rating", value: "3" }),
-                                        _react2.default.createElement("label", { className: "full", htmlFor: "star3", title: "Meh - 3 stars" }),
+                                        _react2.default.createElement("label", { onClick: function onClick() {
+                                                return _this2.props.onSetRating(id, 3);
+                                            }, className: "full", htmlFor: "star3", title: "Meh - 3 stars" }),
                                         _react2.default.createElement("input", { type: "radio", id: "star2", name: "rating", value: "2" }),
-                                        _react2.default.createElement("label", { className: "full", htmlFor: "star2", title: "Kinda bad - 2 stars" }),
+                                        _react2.default.createElement("label", { onClick: function onClick() {
+                                                return _this2.props.onSetRating(id, 2);
+                                            }, className: "full", htmlFor: "star2", title: "Kinda bad - 2 stars" }),
                                         _react2.default.createElement("input", { type: "radio", id: "star1", name: "rating", value: "1" }),
-                                        _react2.default.createElement("label", { className: "full", htmlFor: "star1", title: "Terrible - 1 star" })
+                                        _react2.default.createElement("label", { onClick: function onClick() {
+                                                return _this2.props.onSetRating(id, 1);
+                                            }, className: "full", htmlFor: "star1", title: "Terrible - 1 star" })
                                     )
                                 )
                             )
@@ -11668,7 +11699,7 @@ var RecipesList = function (_Component) {
 
             var renderRecipes = function renderRecipes() {
                 return recipes.map(function (recipe) {
-                    return _react2.default.createElement(_Recipe2.default, _extends({ key: recipe.id }, recipe, { onFavorite: _this2.props.onFavorite }));
+                    return _react2.default.createElement(_Recipe2.default, _extends({ key: recipe.id }, recipe, { onFavorite: _this2.props.onFavorite, onSetRating: _this2.props.onSetRating }));
                 });
             };
 

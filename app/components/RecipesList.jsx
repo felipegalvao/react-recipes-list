@@ -7,16 +7,12 @@ class RecipesList extends Component {
         super(props);
     }
 
-    
-
-    
-
     render() {
         var {recipes} = this.props;
 
         var renderRecipes = () => {
             return recipes.map((recipe) => {
-                return <Recipe key={recipe.id} {...recipe} onFavorite={this.props.onFavorite} />
+                return <Recipe key={recipe.id} {...recipe} onFavorite={this.props.onFavorite} onSetRating={this.props.onSetRating} />
             })            
         }
 

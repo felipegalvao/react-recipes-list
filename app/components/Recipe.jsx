@@ -70,11 +70,20 @@ class Recipe extends Component {
                                 <p>Give Your Rating</p>
                                 <div>
                                     <fieldset className="rating">
-                                        <input type="radio" id="star5" name="rating" value="5" /><label className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>                                        
-                                        <input type="radio" id="star4" name="rating" value="4" /><label className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>                                        
-                                        <input type="radio" id="star3" name="rating" value="3" /><label className = "full" htmlFor="star3" title="Meh - 3 stars"></label>                                        
-                                        <input type="radio" id="star2" name="rating" value="2" /><label className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>                                        
-                                        <input type="radio" id="star1" name="rating" value="1" /><label className = "full" htmlFor="star1" title="Terrible - 1 star"></label>                                        
+                                        <input type="radio" id="star5" name="rating" value="5" />
+                                        <label onClick={() => this.props.onSetRating(id, 5)} className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>
+
+                                        <input type="radio" id="star4" name="rating" value="4" />
+                                        <label onClick={() => this.props.onSetRating(id, 4)} className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>
+                                        
+                                        <input type="radio" id="star3" name="rating" value="3" />
+                                        <label onClick={() => this.props.onSetRating(id, 3)} className = "full" htmlFor="star3" title="Meh - 3 stars"></label>
+
+                                        <input type="radio" id="star2" name="rating" value="2" />
+                                        <label onClick={() => this.props.onSetRating(id, 2)} className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
+
+                                        <input type="radio" id="star1" name="rating" value="1" />
+                                        <label onClick={() => this.props.onSetRating(id, 1)} className = "full" htmlFor="star1" title="Terrible - 1 star"></label>
                                     </fieldset>                                    
                                 </div>
                             </div>

@@ -21,7 +21,8 @@ class MainApp extends Component {
             var parsedRecipes = recipes.map((recipe) => {
                 return {
                     ...recipe,
-                    isFavorite: false
+                    isFavorite: false,
+                    userRating: null
                 }
             })
 
@@ -47,6 +48,26 @@ class MainApp extends Component {
         this.setState({recipes: updatedRecipes});
     }
 
+    handleSetRating = (id, rating) => {
+        var updatedRecipes = this.state.recipes.map((recipe) => {
+            if (recipe.id === id) {
+                // If user never voted, increase the number of ratings
+                if (recipe.userRating === null) {
+                    recipe.rating = ((recipe.rating * recipe.ratings) + rating)/(recipe.ratings + 1);
+                    recipe.ratings = recipe.ratings + 1;
+                // If user already voted and is now changing its vote
+                } else {
+                    recipe.rating = ((recipe.rating * recipe.ratings) - recipe.userRating + rating)/(recipe.ratings);                    
+                }              
+                recipe.userRating = rating;                
+            }
+
+            return recipe;
+        })
+
+        this.setState({recipes: updatedRecipes});
+    }
+
     render() {
         var {loggedIn, recipes} = this.state;
 
@@ -62,7 +83,7 @@ class MainApp extends Component {
                     </div>
                 )
             } else {
-                return (<RecipesList recipes={recipes} onFavorite={this.handleFavorite} />)
+                return (<RecipesList recipes={recipes} onFavorite={this.handleFavorite} onSetRating={this.handleSetRating} />)
             }
         }
 
