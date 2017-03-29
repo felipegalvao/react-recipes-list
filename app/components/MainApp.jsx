@@ -15,6 +15,7 @@ class MainApp extends Component {
     }
 
     componentWillMount() {
+        // Get the Recipes from the JSON file and save them in the state
         var that = this;
 
         api.getRecipes().then(function (recipes) {
@@ -39,9 +40,13 @@ class MainApp extends Component {
     handleFavorite = (id) => {        
         var updatedRecipes = this.state.recipes.map((recipe) => {
             if (recipe.id === id) {
+                if (recipe.isFavorite === false) {
+                    recipe.favorites = recipe.favorites + 1;
+                } else {
+                    recipe.favorites = recipe.favorites - 1;
+                }
                 recipe.isFavorite = !recipe.isFavorite;
             }
-
             return recipe;
         })
 

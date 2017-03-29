@@ -19,7 +19,7 @@
         input {
             width: 100%;
             padding: 5px;            
-            border: 1px solid gray;
+            border: 1px solid $medium-gray;
             line-height: 1.5;
             &:focus {
                 border-color: $fresh-green-medium;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Recipe extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class Recipe extends Component {
 
     render() {
         var {id, name, thumb, headline, user, difficulty, description, ingredients, calories, carbos, 
-             fats, fibers, proteins, rating, ratings, isFavorite} = this.props;
+             fats, fibers, proteins, rating, ratings, isFavorite, favorites} = this.props;
         var {moreInfoVisible} = this.state;
 
         // This function render the list of ingredients
@@ -122,7 +123,7 @@ class Recipe extends Component {
                                         </tr>
                                         <tr>
                                             <td>Proteins</td>
-                                            <td>{proteins}</td>
+                                            <td>{proteins === "" ? "N/A" : proteins}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -163,12 +164,14 @@ class Recipe extends Component {
                                 <h2>{name}</h2>
                             </div>
                             <div className="col-1 col-sm-1">
-                                {renderFavorite()}
+                                {renderFavorite()}                                
                             </div>
                         </div>
                         
                         <p className="recipe-headline">{headline}</p>
-                        <p className="recipe-difficulty"><i className="fa fa-puzzle-piece" aria-hidden="true"></i> Difficulty: {difficulty}</p>
+                        <p className="recipe-user">By {user.name} ({user.email})</p>
+                        <p className="recipe-difficulty"><i className="fa fa-signal" aria-hidden="true"></i> Difficulty: {difficulty}</p>
+                        <p className="recipe-favorites"><i className="fa fa-heart" aria-hidden="true"></i>{favorites} {favorites === 1 ? "favorite" : "favorites"} </p>
                         {renderSeeMoreElement()}
                     </div>
                 </div>
