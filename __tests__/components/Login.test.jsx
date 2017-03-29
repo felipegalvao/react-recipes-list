@@ -1,7 +1,7 @@
 import React from 'react';
 import chai from 'chai';
 import sinon from 'sinon';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Login from '../../app/components/Login.jsx';
 
 var expect = chai.expect;

@@ -12,6 +12,7 @@ class Login extends Component {
 
     handleLogin = (event) => {
         event.preventDefault();
+        // Additional validation; validation already done through HTML5 input fields
         if (this.state.email !== '' && this.state.password !== '') {
             var re = /\S+@\S+\.\S+/;
             if (re.test(this.state.email) === true) {

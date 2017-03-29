@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 232);
+/******/ 	return __webpack_require__(__webpack_require__.s = 231);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13036,6 +13036,7 @@ var Login = function (_Component) {
 
         _this.handleLogin = function (event) {
             event.preventDefault();
+            // Additional validation; validation already done through HTML5 input fields
             if (_this.state.email !== '' && _this.state.password !== '') {
                 var re = /\S+@\S+\.\S+/;
                 if (re.test(_this.state.email) === true) {
@@ -13729,9 +13730,17 @@ var RecipesList = function (_Component) {
 
 
             var renderRecipes = function renderRecipes() {
-                return recipes.map(function (recipe) {
-                    return _react2.default.createElement(_Recipe2.default, _extends({ key: recipe.id }, recipe, { onFavorite: _this2.props.onFavorite, onSetRating: _this2.props.onSetRating }));
-                });
+                if (recipes.length > 0) {
+                    return recipes.map(function (recipe) {
+                        return _react2.default.createElement(_Recipe2.default, _extends({ key: recipe.id }, recipe, { onFavorite: _this2.props.onFavorite, onSetRating: _this2.props.onSetRating }));
+                    });
+                } else {
+                    return _react2.default.createElement(
+                        'p',
+                        null,
+                        'There are no recipes to show'
+                    );
+                }
             };
 
             return _react2.default.createElement(
@@ -28691,8 +28700,7 @@ if(false) {
 }
 
 /***/ }),
-/* 231 */,
-/* 232 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(98);

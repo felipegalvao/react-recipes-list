@@ -11,9 +11,14 @@ class RecipesList extends Component {
         var {recipes} = this.props;
 
         var renderRecipes = () => {
-            return recipes.map((recipe) => {
-                return <Recipe key={recipe.id} {...recipe} onFavorite={this.props.onFavorite} onSetRating={this.props.onSetRating} />
-            })            
+            if (recipes.length > 0) {
+                return recipes.map((recipe) => {
+                    return <Recipe key={recipe.id} {...recipe} onFavorite={this.props.onFavorite} onSetRating={this.props.onSetRating} />
+                })
+            } else {                
+                return <p>There are no recipes to show</p>
+            }
+                        
         }
 
         return (
