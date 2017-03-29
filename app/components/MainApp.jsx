@@ -42,14 +42,18 @@ class MainApp extends Component {
         this.setState({loggedIn: true});
     }
 
-    handleFavorite = (id) => {        
+    handleFavorite = (id) => {
+        // Update recipe favorite status        
         var updatedRecipes = this.state.recipes.map((recipe) => {
             if (recipe.id === id) {
+                // If recipe was not a favorite, increase count of favorites by 1
                 if (recipe.isFavorite === false) {
                     recipe.favorites = recipe.favorites + 1;
+                // If recipe was a favorite, decrease count of favorites by 1
                 } else {
                     recipe.favorites = recipe.favorites - 1;
                 }
+                // Toggle recipe favorite status
                 recipe.isFavorite = !recipe.isFavorite;
             }
             return recipe;
