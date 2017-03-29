@@ -9,7 +9,7 @@ class MainApp extends Component {
         super(props);
 
         this.state = {
-            loggedIn: true,
+            loggedIn: false,
             recipes: []
         };
     }

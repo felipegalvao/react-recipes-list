@@ -1,4 +1,5 @@
 .recipe-component {
+    // General Styles to the Recipe Component
     * {
         font-size: 0.9rem;
     }
@@ -7,17 +8,12 @@
         max-width: 100%;
         height: auto;
     }
+
     h2 {
         color: black;
         font-size: 1.1rem;
         margin-bottom: 4px;
     }
-    .fa-heart-o, .fa-heart {
-        float: right;
-        color: $fresh-green-medium;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }    
 
     p {
         font-size: 0.9rem;
@@ -25,15 +21,38 @@
             font-size: 1rem;
         }
     }
+
+    hr {
+        border: none;
+        height: 1px;
+        color: $light-gray;
+        background-color: $light-gray;
+    }
+
+    .row-recipe-name-favorite {
+        [class*="col-"] {
+            padding: 0;
+        }
+    }
+
+    .fa-heart-o, .fa-heart {
+        float: right;
+        color: $fresh-green-medium;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }    
+    
     .recipe-headline {
         color: $medium-gray;
         font-style: italic;        
         margin-bottom: 7px;
         line-height: 1.5;
     }
-    .recipe-creator {
-        line-height: 1.5;
-    }
+
+    .recipe-user {
+        line-height: 1.3;
+    }    
+
     .recipe-difficulty, .recipe-favorites {
         margin-top: 10px;
         line-height: 1.3;
@@ -50,18 +69,7 @@
             color: #000;
             margin-right: 10px;
         }
-    }
-
-    .recipe-user {
-        line-height: 1.3;
-    }
-
-    hr {
-        border: none;
-        height: 1px;
-        color: $light-gray;
-        background-color: $light-gray;
-    }
+    }    
 
     .p-see-more {
         margin-top: 15px;
@@ -72,27 +80,6 @@
 
     .col-recipe-divider {
         padding: 0 12px;
-    }
-
-    .btn-favorite {
-        width: 100%;
-        margin: 0 auto;
-        display: block;
-        background-color: $fresh-green-medium;
-        border: 1px solid $fresh-green-medium;
-        padding: 10px;
-        color: #fff;
-        font-size: 1.1rem;
-        transition: background-color 0.5s;
-        &:hover {
-            background-color: $fresh-green-dark;
-            transition: background-color 0.5s;
-        }
-    }
-    
-    .p-recipe-description {
-        line-height: 1.5;
-        text-align: justify;
     }
 
     .col-current-rating, .col-give-your-rating {
@@ -110,6 +97,11 @@
             }
         }
     }
+    
+    .p-recipe-description {
+        line-height: 1.5;
+        text-align: justify;
+    }    
 
     ul {
         list-style: square;
@@ -130,13 +122,7 @@
             border: 1px solid #fff;
             text-align: center;
         }
-    }
-
-    .row-recipe-name-favorite {
-        [class*="col-"] {
-            padding: 0;
-        }
-    }
+    }    
 
     .col-nutritional-info, .col-ingredients-list {
         p {
@@ -151,37 +137,34 @@
         }
     }
 
+    // Styles for the Star Rating element
     @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-
     .rating { 
-    border: none;
-    margin: 0 auto;
-    display: inline-block;
+        border: none;
+        margin: 0 auto;
+        display: inline-block;
     }
 
     .rating > input { display: none; } 
     .rating > label:before { 
-    margin: 4px;
-    font-size: 1.25em;
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f005";
-    
+        margin: 4px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";    
     }
 
     .rating > .half:before { 
-    content: "\f089";
-    position: absolute;
+        content: "\f089";
+        position: absolute;
     }
 
     .rating > label { 
-    color: #ddd; 
-    float: right;   
-    }
+        color: #ddd; 
+        float: right;   
+    }    
 
-    /***** CSS Magic to Highlight Stars on Hover *****/
-
-    .rating > input:checked ~ label, /* show gold star when clicked */
+    .rating > input:checked ~ label, /* color star when clicked */
     .rating:not(:checked) > label:hover, /* hover current star */
     .rating:not(:checked) > label:hover ~ label { color: $fresh-green-dark;  } /* hover previous stars in list */
 
@@ -192,6 +175,6 @@
 
     /* Additional Star Styles */
     .fa-star, .fa-star-o {
-    color: $fresh-green-medium;
+        color: $fresh-green-medium;
     }
 }
