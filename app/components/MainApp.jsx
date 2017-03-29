@@ -10,7 +10,8 @@ class MainApp extends Component {
 
         this.state = {
             loggedIn: false,
-            recipes: []
+            recipes: [],
+            apiErrorMessage: null
         };
     }
 
@@ -30,6 +31,10 @@ class MainApp extends Component {
             that.setState({
                 recipes: parsedRecipes
             });
+        }).catch(function (error) {
+            that.setState({
+                apiErrorMessage: "An error has occured"
+            })
         })
     }
 

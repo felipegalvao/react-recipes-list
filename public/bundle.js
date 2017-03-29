@@ -13203,7 +13203,8 @@ var MainApp = function (_Component) {
 
         _this.state = {
             loggedIn: false,
-            recipes: []
+            recipes: [],
+            apiErrorMessage: null
         };
         return _this;
     }
@@ -13224,6 +13225,10 @@ var MainApp = function (_Component) {
 
                 that.setState({
                     recipes: parsedRecipes
+                });
+            }).catch(function (error) {
+                that.setState({
+                    apiErrorMessage: "An error has occured"
                 });
             });
         }
@@ -13346,7 +13351,7 @@ var Recipe = function (_Component) {
                 favorites = _props.favorites;
             var moreInfoVisible = this.state.moreInfoVisible;
 
-            // This function render the list of ingredients
+            // Render the list of ingredients
 
             var renderIngredients = function renderIngredients() {
                 var ingredientsCounter = 0;
@@ -13359,30 +13364,32 @@ var Recipe = function (_Component) {
                 });
             };
 
+            // Render one filled star for each rating (rounded to the nearest integer), filling the rest with empty stars
             var renderCurrentRating = function renderCurrentRating() {
                 var listItems = [];
                 var i = 0;
                 for (i; i < Math.round(rating); i++) {
-                    listItems.push(_react2.default.createElement('i', { className: 'fa fa-star', 'aria-hidden': 'true' }));
+                    listItems.push(_react2.default.createElement('i', { className: 'fa fa-star', 'aria-hidden': 'true', key: i }));
                 }
                 for (i; i < 5; i++) {
-                    listItems.push(_react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true' }));
+                    listItems.push(_react2.default.createElement('i', { className: 'fa fa-star-o', 'aria-hidden': 'true', key: i }));
                 }
 
                 return _react2.default.createElement(
                     'div',
-                    null,
+                    { title: "Rating: " + rating },
                     listItems
                 );
             };
 
+            // This function will render a filled or an empty heart
             var renderFavorite = function renderFavorite() {
                 if (isFavorite === false || isFavorite === undefined) {
-                    return _react2.default.createElement('i', { className: 'fa fa-heart-o', onClick: function onClick() {
+                    return _react2.default.createElement('i', { className: 'fa fa-heart-o icon-favorite-recipe', onClick: function onClick() {
                             return _this2.props.onFavorite(id);
                         }, 'aria-hidden': 'true' });
                 } else {
-                    return _react2.default.createElement('i', { className: 'fa fa-heart', onClick: function onClick() {
+                    return _react2.default.createElement('i', { className: 'fa fa-heart icon-unfavorite-recipe', onClick: function onClick() {
                             return _this2.props.onFavorite(id);
                         }, 'aria-hidden': 'true' });
                 }
@@ -13393,7 +13400,7 @@ var Recipe = function (_Component) {
                 if (moreInfoVisible === true) {
                     return _react2.default.createElement(
                         'div',
-                        null,
+                        { className: 'show-more-info-container' },
                         _react2.default.createElement(
                             'div',
                             { className: 'row' },
@@ -13426,23 +13433,23 @@ var Recipe = function (_Component) {
                                         _react2.default.createElement('input', { type: 'radio', id: 'star5', name: 'rating', value: '5' }),
                                         _react2.default.createElement('label', { onClick: function onClick() {
                                                 return _this2.props.onSetRating(id, 5);
-                                            }, className: 'full', htmlFor: 'star5', title: 'Awesome - 5 stars' }),
+                                            }, id: 'label-star5', className: 'full', htmlFor: 'star5', title: 'Awesome - 5 stars' }),
                                         _react2.default.createElement('input', { type: 'radio', id: 'star4', name: 'rating', value: '4' }),
                                         _react2.default.createElement('label', { onClick: function onClick() {
                                                 return _this2.props.onSetRating(id, 4);
-                                            }, className: 'full', htmlFor: 'star4', title: 'Pretty good - 4 stars' }),
+                                            }, id: 'label-star4', className: 'full', htmlFor: 'star4', title: 'Pretty good - 4 stars' }),
                                         _react2.default.createElement('input', { type: 'radio', id: 'star3', name: 'rating', value: '3' }),
                                         _react2.default.createElement('label', { onClick: function onClick() {
                                                 return _this2.props.onSetRating(id, 3);
-                                            }, className: 'full', htmlFor: 'star3', title: 'Meh - 3 stars' }),
+                                            }, id: 'label-star3', className: 'full', htmlFor: 'star3', title: 'Meh - 3 stars' }),
                                         _react2.default.createElement('input', { type: 'radio', id: 'star2', name: 'rating', value: '2' }),
                                         _react2.default.createElement('label', { onClick: function onClick() {
                                                 return _this2.props.onSetRating(id, 2);
-                                            }, className: 'full', htmlFor: 'star2', title: 'Kinda bad - 2 stars' }),
+                                            }, id: 'label-star2', className: 'full', htmlFor: 'star2', title: 'Kinda bad - 2 stars' }),
                                         _react2.default.createElement('input', { type: 'radio', id: 'star1', name: 'rating', value: '1' }),
                                         _react2.default.createElement('label', { onClick: function onClick() {
                                                 return _this2.props.onSetRating(id, 1);
-                                            }, className: 'full', htmlFor: 'star1', title: 'Terrible - 1 star' })
+                                            }, id: 'label-star1', className: 'full', htmlFor: 'star1', title: 'Terrible - 1 star' })
                                     )
                                 )
                             )

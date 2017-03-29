@@ -14,16 +14,14 @@ class Recipe extends Component {
         this.setState({
             moreInfoVisible: !this.state.moreInfoVisible
         });
-    }
-
-    
+    }    
 
     render() {
         var {id, name, thumb, headline, user, difficulty, description, ingredients, calories, carbos, 
              fats, fibers, proteins, rating, ratings, isFavorite, favorites} = this.props;
         var {moreInfoVisible} = this.state;
 
-        // This function render the list of ingredients
+        // Render the list of ingredients
         var renderIngredients = () => {
             var ingredientsCounter = 0;
             return ingredients.map((ingredient) => {
@@ -31,28 +29,30 @@ class Recipe extends Component {
             })
         }
 
+        // Render one filled star for each rating (rounded to the nearest integer), filling the rest with empty stars
         var renderCurrentRating = () => {
             var listItems = [];
             var i = 0;
             for (i; i < Math.round(rating); i++) {
-                listItems.push(<i className="fa fa-star" aria-hidden="true"></i>)
+                listItems.push(<i className="fa fa-star" aria-hidden="true" key={i}></i>)
             }
             for (i; i < 5; i++) {
-                listItems.push(<i className="fa fa-star-o" aria-hidden="true"></i>)
+                listItems.push(<i className="fa fa-star-o" aria-hidden="true" key={i}></i>)
             }
 
             return (
-                <div>                    
+                <div title={"Rating: " + rating}>                    
                     {listItems}
                 </div>
             )            
         }
 
+        // This function will render a filled or an empty heart
         var renderFavorite = () => {
             if (isFavorite === false || isFavorite === undefined) {
-                return (<i className="fa fa-heart-o" onClick={() => this.props.onFavorite(id)} aria-hidden="true"></i>);
+                return (<i className="fa fa-heart-o icon-favorite-recipe" onClick={() => this.props.onFavorite(id)} aria-hidden="true"></i>);
             } else {
-                return (<i className="fa fa-heart" onClick={() => this.props.onFavorite(id)} aria-hidden="true"></i>);
+                return (<i className="fa fa-heart icon-unfavorite-recipe" onClick={() => this.props.onFavorite(id)} aria-hidden="true"></i>);
             }
             
         }
@@ -61,7 +61,7 @@ class Recipe extends Component {
         var renderMoreInfo = () => {
             if (moreInfoVisible === true) {
                 return (
-                    <div>
+                    <div className="show-more-info-container">
                         <div className="row">                            
                             <div className="col-6 col-sm-6 col-current-rating text-center">
                                 <p>Rating ({ratings === null ? 0 : ratings})</p>
@@ -72,19 +72,19 @@ class Recipe extends Component {
                                 <div>
                                     <fieldset className="rating">
                                         <input type="radio" id="star5" name="rating" value="5" />
-                                        <label onClick={() => this.props.onSetRating(id, 5)} className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>
+                                        <label onClick={() => this.props.onSetRating(id, 5)} id="label-star5" className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>
 
                                         <input type="radio" id="star4" name="rating" value="4" />
-                                        <label onClick={() => this.props.onSetRating(id, 4)} className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>
+                                        <label onClick={() => this.props.onSetRating(id, 4)} id="label-star4" className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>
                                         
                                         <input type="radio" id="star3" name="rating" value="3" />
-                                        <label onClick={() => this.props.onSetRating(id, 3)} className = "full" htmlFor="star3" title="Meh - 3 stars"></label>
+                                        <label onClick={() => this.props.onSetRating(id, 3)} id="label-star3" className = "full" htmlFor="star3" title="Meh - 3 stars"></label>
 
                                         <input type="radio" id="star2" name="rating" value="2" />
-                                        <label onClick={() => this.props.onSetRating(id, 2)} className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
+                                        <label onClick={() => this.props.onSetRating(id, 2)} id="label-star2" className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
 
                                         <input type="radio" id="star1" name="rating" value="1" />
-                                        <label onClick={() => this.props.onSetRating(id, 1)} className = "full" htmlFor="star1" title="Terrible - 1 star"></label>
+                                        <label onClick={() => this.props.onSetRating(id, 1)} id="label-star1" className = "full" htmlFor="star1" title="Terrible - 1 star"></label>
                                     </fieldset>                                    
                                 </div>
                             </div>
