@@ -17,10 +17,8 @@ class MainApp extends Component {
 
     componentWillMount() {
         // Get the Recipes from the JSON file and save them in the state
-        var that = this;
-
-        api.getRecipes().then(function (recipes) {
-            var parsedRecipes = recipes.map((recipe) => {
+        api.getRecipes().then((recipes) => {
+            const parsedRecipes = recipes.map((recipe) => {
                 return {
                     ...recipe,
                     isFavorite: false,
@@ -28,7 +26,7 @@ class MainApp extends Component {
                 }
             })
 
-            that.setState({
+            this.setState({
                 recipes: parsedRecipes
             });
         }).catch(function (error) {
@@ -43,8 +41,8 @@ class MainApp extends Component {
     }
 
     handleFavorite = (id) => {
-        // Update recipe favorite status        
-        var updatedRecipes = this.state.recipes.map((recipe) => {
+        // Update recipe favorite status
+        const updatedRecipes = this.state.recipes.map((recipe) => {
             if (recipe.id === id) {
                 // If recipe was not a favorite, increase count of favorites by 1
                 if (recipe.isFavorite === false) {
@@ -63,7 +61,7 @@ class MainApp extends Component {
     }
 
     handleSetRating = (id, rating) => {
-        var updatedRecipes = this.state.recipes.map((recipe) => {
+        const updatedRecipes = this.state.recipes.map((recipe) => {
             if (recipe.id === id) {
                 // If user never voted, increase the number of ratings
                 if (recipe.userRating === null) {
@@ -71,9 +69,9 @@ class MainApp extends Component {
                     recipe.ratings = recipe.ratings + 1;
                 // If user already voted and is now changing its vote
                 } else {
-                    recipe.rating = ((recipe.rating * recipe.ratings) - recipe.userRating + rating)/(recipe.ratings);                    
-                }              
-                recipe.userRating = rating;                
+                    recipe.rating = ((recipe.rating * recipe.ratings) - recipe.userRating + rating)/(recipe.ratings);
+                }
+                recipe.userRating = rating;
             }
 
             return recipe;
@@ -83,9 +81,9 @@ class MainApp extends Component {
     }
 
     render() {
-        var {loggedIn, recipes} = this.state;
+        const {loggedIn, recipes} = this.state;
 
-        var renderMainApp = () => {
+        const renderMainApp = () => {
             if (loggedIn === false) {
                 return (
                     <div className="row">
@@ -104,7 +102,7 @@ class MainApp extends Component {
         return (
             <div className="grid">
                 <div className="container">
-                    {renderMainApp()}                 
+                    {renderMainApp()}
                 </div>
             </div>
         );
