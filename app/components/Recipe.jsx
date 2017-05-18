@@ -175,7 +175,23 @@ class Recipe extends Component {
           </div>
         );
       }
-    };        
+    };
+
+    // This function will render the See More or See Less element, based on the current state of the component
+    const renderSeeMoreElement = () => {
+      return (
+        <p className="p-see-more" onClick={this.handleShowHideMoreInfo}>
+          See
+          {" "}
+          {moreInfoVisible ? "Less" : "More"}
+          {" "}
+          <i
+            className={`fa fa-caret-${moreInfoVisible ? "up" : "down"}`}
+            aria-hidden="true"
+          />
+        </p>
+      );
+    };
 
     return (
       <div className="recipe-component">
@@ -213,16 +229,7 @@ class Recipe extends Component {
               {favorites === 1 ? "favorite" : "favorites"}
               {" "}
             </p>
-            <p className="p-see-more" onClick={this.handleShowHideMoreInfo}>
-              See
-              {" "}
-              {moreInfoVisible ? "Less" : "More"}
-              {" "}
-              <i
-                className={`fa fa-caret-${moreInfoVisible ? "up" : "down"}`}
-                aria-hidden="true"
-              />
-            </p>
+            {renderSeeMoreElement()}
           </div>
         </div>
         {renderMoreInfo()}

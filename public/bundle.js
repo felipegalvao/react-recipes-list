@@ -11659,6 +11659,22 @@ var Recipe = function (_Component) {
         }
       };
 
+      // This function will render the See More or See Less element, based on the current state of the component
+      var renderSeeMoreElement = function renderSeeMoreElement() {
+        return _react2.default.createElement(
+          "p",
+          { className: "p-see-more", onClick: _this2.handleShowHideMoreInfo },
+          "See",
+          " ",
+          moreInfoVisible ? "Less" : "More",
+          " ",
+          _react2.default.createElement("i", {
+            className: "fa fa-caret-" + (moreInfoVisible ? "up" : "down"),
+            "aria-hidden": "true"
+          })
+        );
+      };
+
       return _react2.default.createElement(
         "div",
         { className: "recipe-component" },
@@ -11729,18 +11745,7 @@ var Recipe = function (_Component) {
               favorites === 1 ? "favorite" : "favorites",
               " "
             ),
-            _react2.default.createElement(
-              "p",
-              { className: "p-see-more", onClick: this.handleShowHideMoreInfo },
-              "See",
-              " ",
-              moreInfoVisible ? "Less" : "More",
-              " ",
-              _react2.default.createElement("i", {
-                className: "fa fa-caret-" + (moreInfoVisible ? "up" : "down"),
-                "aria-hidden": "true"
-              })
-            )
+            renderSeeMoreElement()
           )
         ),
         renderMoreInfo(),
