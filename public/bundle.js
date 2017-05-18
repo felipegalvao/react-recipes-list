@@ -11082,7 +11082,7 @@ var Login = function (_Component) {
     };
 
     _this.validateForm = function (email, password) {
-      if (email === "" || email === "") {
+      if (email === "" || password === "") {
         return false;
       } else {
         var re = /\S+@\S+\.\S+/;
@@ -11346,7 +11346,7 @@ exports.default = MainApp;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11364,383 +11364,400 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Recipe = function (_Component) {
-    _inherits(Recipe, _Component);
+  _inherits(Recipe, _Component);
 
-    function Recipe(props) {
-        _classCallCheck(this, Recipe);
+  function Recipe(props) {
+    _classCallCheck(this, Recipe);
 
-        var _this = _possibleConstructorReturn(this, (Recipe.__proto__ || Object.getPrototypeOf(Recipe)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Recipe.__proto__ || Object.getPrototypeOf(Recipe)).call(this, props));
 
-        _this.handleShowHideMoreInfo = function () {
-            _this.setState({
-                moreInfoVisible: !_this.state.moreInfoVisible
-            });
-        };
+    _this.handleShowHideMoreInfo = function () {
+      _this.setState({
+        moreInfoVisible: !_this.state.moreInfoVisible
+      });
+    };
 
-        _this.state = {
-            moreInfoVisible: false
-        };
-        return _this;
-    }
+    _this.state = {
+      moreInfoVisible: false
+    };
+    return _this;
+  }
 
-    _createClass(Recipe, [{
-        key: "render",
-        value: function render() {
-            var _this2 = this;
+  _createClass(Recipe, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
 
-            var _props = this.props,
-                id = _props.id,
-                name = _props.name,
-                thumb = _props.thumb,
-                headline = _props.headline,
-                user = _props.user,
-                difficulty = _props.difficulty,
-                description = _props.description,
-                ingredients = _props.ingredients,
-                calories = _props.calories,
-                carbos = _props.carbos,
-                fats = _props.fats,
-                fibers = _props.fibers,
-                proteins = _props.proteins,
-                rating = _props.rating,
-                ratings = _props.ratings,
-                isFavorite = _props.isFavorite,
-                favorites = _props.favorites;
-            var moreInfoVisible = this.state.moreInfoVisible;
+      var _props = this.props,
+          id = _props.id,
+          name = _props.name,
+          thumb = _props.thumb,
+          headline = _props.headline,
+          user = _props.user,
+          difficulty = _props.difficulty,
+          description = _props.description,
+          ingredients = _props.ingredients,
+          calories = _props.calories,
+          carbos = _props.carbos,
+          fats = _props.fats,
+          fibers = _props.fibers,
+          proteins = _props.proteins,
+          rating = _props.rating,
+          ratings = _props.ratings,
+          isFavorite = _props.isFavorite,
+          favorites = _props.favorites;
+      var moreInfoVisible = this.state.moreInfoVisible;
 
-            // Render the list of ingredients
+      // Render the list of ingredients
 
-            var renderIngredients = function renderIngredients() {
-                var ingredientsCounter = 0;
-                return ingredients.map(function (ingredient) {
-                    return _react2.default.createElement(
-                        "li",
-                        { key: ingredientsCounter++ },
-                        ingredient
-                    );
-                });
-            };
+      var renderIngredients = function renderIngredients() {
+        var ingredientsCounter = 0;
+        return ingredients.map(function (ingredient) {
+          return _react2.default.createElement(
+            "li",
+            { key: ingredientsCounter++ },
+            ingredient
+          );
+        });
+      };
 
-            // Render one filled star for each rating (rounded to the nearest integer), filling the rest with empty stars
-            var renderCurrentRating = function renderCurrentRating() {
-                var listItems = [];
-                var i = 0;
-                for (i; i < Math.round(rating); i++) {
-                    listItems.push(_react2.default.createElement("i", { className: "fa fa-star", "aria-hidden": "true", key: i }));
-                }
-                for (i; i < 5; i++) {
-                    listItems.push(_react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true", key: i }));
-                }
+      // Render one filled star for each rating (rounded to the nearest integer), filling the rest with empty stars
+      var renderCurrentRating = function renderCurrentRating() {
+        var listItems = [];
+        var i = 0;
+        for (i; i < Math.round(rating); i++) {
+          listItems.push(_react2.default.createElement("i", { className: "fa fa-star", "aria-hidden": "true", key: i }));
+        }
+        for (i; i < 5; i++) {
+          listItems.push(_react2.default.createElement("i", { className: "fa fa-star-o", "aria-hidden": "true", key: i }));
+        }
 
-                return _react2.default.createElement(
-                    "div",
-                    { title: "Rating: " + rating },
-                    listItems
-                );
-            };
+        return _react2.default.createElement(
+          "div",
+          { title: "Rating: " + rating },
+          listItems
+        );
+      };
 
-            // This function will render a filled or an empty heart
-            var renderFavorite = function renderFavorite() {
-                if (isFavorite === false || isFavorite === undefined) {
-                    return _react2.default.createElement("i", { className: "fa fa-heart-o icon-favorite-recipe", onClick: function onClick() {
-                            return _this2.props.onFavorite(id);
-                        }, "aria-hidden": "true" });
-                } else {
-                    return _react2.default.createElement("i", { className: "fa fa-heart icon-unfavorite-recipe", onClick: function onClick() {
-                            return _this2.props.onFavorite(id);
-                        }, "aria-hidden": "true" });
-                }
-            };
-
-            // Here will be all the information shown when the user clicks the See More element
-            var renderMoreInfo = function renderMoreInfo() {
-                if (moreInfoVisible === true) {
-                    return _react2.default.createElement(
-                        "div",
-                        { className: "show-more-info-container" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-6 col-sm-6 col-current-rating text-center" },
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    "Rating (",
-                                    ratings === null ? 0 : ratings,
-                                    ")"
-                                ),
-                                renderCurrentRating()
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-6 col-sm-6 col-give-your-rating text-center" },
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    "Give Your Rating"
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    null,
-                                    _react2.default.createElement(
-                                        "fieldset",
-                                        { className: "rating" },
-                                        _react2.default.createElement("input", { type: "radio", id: "star5", name: "rating", value: "5" }),
-                                        _react2.default.createElement("label", { onClick: function onClick() {
-                                                return _this2.props.onSetRating(id, 5);
-                                            }, id: "label-star5", className: "full", htmlFor: "star5", title: "Awesome - 5 stars" }),
-                                        _react2.default.createElement("input", { type: "radio", id: "star4", name: "rating", value: "4" }),
-                                        _react2.default.createElement("label", { onClick: function onClick() {
-                                                return _this2.props.onSetRating(id, 4);
-                                            }, id: "label-star4", className: "full", htmlFor: "star4", title: "Pretty good - 4 stars" }),
-                                        _react2.default.createElement("input", { type: "radio", id: "star3", name: "rating", value: "3" }),
-                                        _react2.default.createElement("label", { onClick: function onClick() {
-                                                return _this2.props.onSetRating(id, 3);
-                                            }, id: "label-star3", className: "full", htmlFor: "star3", title: "Meh - 3 stars" }),
-                                        _react2.default.createElement("input", { type: "radio", id: "star2", name: "rating", value: "2" }),
-                                        _react2.default.createElement("label", { onClick: function onClick() {
-                                                return _this2.props.onSetRating(id, 2);
-                                            }, id: "label-star2", className: "full", htmlFor: "star2", title: "Kinda bad - 2 stars" }),
-                                        _react2.default.createElement("input", { type: "radio", id: "star1", name: "rating", value: "1" }),
-                                        _react2.default.createElement("label", { onClick: function onClick() {
-                                                return _this2.props.onSetRating(id, 1);
-                                            }, id: "label-star1", className: "full", htmlFor: "star1", title: "Terrible - 1 star" })
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-12 col-sm-12" },
-                                _react2.default.createElement(
-                                    "p",
-                                    { className: "p-recipe-description" },
-                                    description
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-6 col-sm-6 col-ingredients-list" },
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    "Ingredients"
-                                ),
-                                _react2.default.createElement(
-                                    "ul",
-                                    null,
-                                    renderIngredients()
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-6 col-sm-6 col-nutritional-info" },
-                                _react2.default.createElement(
-                                    "p",
-                                    null,
-                                    "Nutritional Table"
-                                ),
-                                _react2.default.createElement(
-                                    "table",
-                                    null,
-                                    _react2.default.createElement(
-                                        "tbody",
-                                        null,
-                                        _react2.default.createElement(
-                                            "tr",
-                                            null,
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                "Calories"
-                                            ),
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                calories === "" ? "N/A" : calories
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "tr",
-                                            null,
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                "Carbos"
-                                            ),
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                carbos === "" ? "N/A" : carbos
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "tr",
-                                            null,
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                "Fats"
-                                            ),
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                fats === "" ? "N/A" : fats
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "tr",
-                                            null,
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                "Fibers"
-                                            ),
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                fibers === "" ? "N/A" : fibers
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            "tr",
-                                            null,
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                "Proteins"
-                                            ),
-                                            _react2.default.createElement(
-                                                "td",
-                                                null,
-                                                proteins === "" ? "N/A" : proteins
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-12 col-sm-12" },
-                                renderSeeMoreElement()
-                            )
-                        )
-                    );
-                }
-            };
-
-            // This function will render the See More or See Less element, based on the current state of the component
-            var renderSeeMoreElement = function renderSeeMoreElement() {
-                if (moreInfoVisible === true) {
-                    return _react2.default.createElement(
-                        "p",
-                        { className: "p-see-more", onClick: _this2.handleShowHideMoreInfo },
-                        "See Less ",
-                        _react2.default.createElement("i", { className: "fa fa-caret-up", "aria-hidden": "true" })
-                    );
-                } else {
-                    return _react2.default.createElement(
-                        "p",
-                        { className: "p-see-more", onClick: _this2.handleShowHideMoreInfo },
-                        "See More ",
-                        _react2.default.createElement("i", { className: "fa fa-caret-down", "aria-hidden": "true" })
-                    );
-                }
-            };
-
-            return _react2.default.createElement(
+      // Here will be all the information shown when the user clicks the See More element
+      var renderMoreInfo = function renderMoreInfo() {
+        if (moreInfoVisible === true) {
+          return _react2.default.createElement(
+            "div",
+            { className: "show-more-info-container" },
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
                 "div",
-                { className: "recipe-component" },
+                { className: "col-6 col-sm-6 col-current-rating text-center" },
                 _react2.default.createElement(
-                    "div",
-                    { className: "row row-recipe-main-info" },
+                  "p",
+                  null,
+                  "Rating (",
+                  ratings === null ? 0 : ratings,
+                  ")"
+                ),
+                renderCurrentRating()
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-6 col-sm-6 col-give-your-rating text-center" },
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Give Your Rating"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  null,
+                  _react2.default.createElement(
+                    "fieldset",
+                    { className: "rating" },
+                    _react2.default.createElement("input", { type: "radio", id: "star5", name: "rating", value: "5" }),
+                    _react2.default.createElement("label", {
+                      onClick: function onClick() {
+                        return _this2.props.onSetRating(id, 5);
+                      },
+                      id: "label-star5",
+                      className: "full",
+                      htmlFor: "star5",
+                      title: "Awesome - 5 stars"
+                    }),
+                    _react2.default.createElement("input", { type: "radio", id: "star4", name: "rating", value: "4" }),
+                    _react2.default.createElement("label", {
+                      onClick: function onClick() {
+                        return _this2.props.onSetRating(id, 4);
+                      },
+                      id: "label-star4",
+                      className: "full",
+                      htmlFor: "star4",
+                      title: "Pretty good - 4 stars"
+                    }),
+                    _react2.default.createElement("input", { type: "radio", id: "star3", name: "rating", value: "3" }),
+                    _react2.default.createElement("label", {
+                      onClick: function onClick() {
+                        return _this2.props.onSetRating(id, 3);
+                      },
+                      id: "label-star3",
+                      className: "full",
+                      htmlFor: "star3",
+                      title: "Meh - 3 stars"
+                    }),
+                    _react2.default.createElement("input", { type: "radio", id: "star2", name: "rating", value: "2" }),
+                    _react2.default.createElement("label", {
+                      onClick: function onClick() {
+                        return _this2.props.onSetRating(id, 2);
+                      },
+                      id: "label-star2",
+                      className: "full",
+                      htmlFor: "star2",
+                      title: "Kinda bad - 2 stars"
+                    }),
+                    _react2.default.createElement("input", { type: "radio", id: "star1", name: "rating", value: "1" }),
+                    _react2.default.createElement("label", {
+                      onClick: function onClick() {
+                        return _this2.props.onSetRating(id, 1);
+                      },
+                      id: "label-star1",
+                      className: "full",
+                      htmlFor: "star1",
+                      title: "Terrible - 1 star"
+                    })
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-12 col-sm-12" },
+                _react2.default.createElement(
+                  "p",
+                  { className: "p-recipe-description" },
+                  description
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-6 col-sm-6 col-ingredients-list" },
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Ingredients"
+                ),
+                _react2.default.createElement(
+                  "ul",
+                  null,
+                  renderIngredients()
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-6 col-sm-6 col-nutritional-info" },
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  "Nutritional Table"
+                ),
+                _react2.default.createElement(
+                  "table",
+                  null,
+                  _react2.default.createElement(
+                    "tbody",
+                    null,
                     _react2.default.createElement(
-                        "div",
-                        { className: "col-6 col-sm-12" },
-                        _react2.default.createElement("img", { src: thumb })
+                      "tr",
+                      null,
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        "Calories"
+                      ),
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        calories === "" ? "N/A" : calories
+                      )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "col-6 col-sm-12" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "row row-recipe-name-favorite" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-11 col-sm-11" },
-                                _react2.default.createElement(
-                                    "h2",
-                                    null,
-                                    name
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "col-1 col-sm-1" },
-                                renderFavorite()
-                            )
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "recipe-headline" },
-                            headline
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "recipe-user" },
-                            "By ",
-                            user.name,
-                            " (",
-                            user.email,
-                            ")"
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "recipe-difficulty" },
-                            _react2.default.createElement("i", { className: "fa fa-signal", "aria-hidden": "true" }),
-                            " Difficulty: ",
-                            difficulty
-                        ),
-                        _react2.default.createElement(
-                            "p",
-                            { className: "recipe-favorites" },
-                            _react2.default.createElement("i", { className: "fa fa-heart", "aria-hidden": "true" }),
-                            favorites,
-                            " ",
-                            favorites === 1 ? "favorite" : "favorites",
-                            " "
-                        ),
-                        renderSeeMoreElement()
-                    )
-                ),
-                renderMoreInfo(),
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
+                      "tr",
+                      null,
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        "Carbos"
+                      ),
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        carbos === "" ? "N/A" : carbos
+                      )
+                    ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "col-12 col-sm-12 col-recipe-divider" },
-                        _react2.default.createElement("hr", null)
+                      "tr",
+                      null,
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        "Fats"
+                      ),
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        fats === "" ? "N/A" : fats
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "tr",
+                      null,
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        "Fibers"
+                      ),
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        fibers === "" ? "N/A" : fibers
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "tr",
+                      null,
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        "Proteins"
+                      ),
+                      _react2.default.createElement(
+                        "td",
+                        null,
+                        proteins === "" ? "N/A" : proteins
+                      )
                     )
+                  )
                 )
-            );
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-12 col-sm-12" },
+                renderSeeMoreElement()
+              )
+            )
+          );
         }
-    }]);
+      };
 
-    return Recipe;
+      return _react2.default.createElement(
+        "div",
+        { className: "recipe-component" },
+        _react2.default.createElement(
+          "div",
+          { className: "row row-recipe-main-info" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-6 col-sm-12" },
+            _react2.default.createElement("img", { src: thumb })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-6 col-sm-12" },
+            _react2.default.createElement(
+              "div",
+              { className: "row row-recipe-name-favorite" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-11 col-sm-11" },
+                _react2.default.createElement(
+                  "h2",
+                  null,
+                  name
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-1 col-sm-1" },
+                _react2.default.createElement("i", {
+                  className: "fa " + (this.props.isFavorite ? "fa-heart icon-unfavorite-recipe" : "fa-heart-o icon-favorite-recipe"),
+                  onClick: function onClick() {
+                    return _this2.props.onFavorite(id);
+                  },
+                  "aria-hidden": "true"
+                })
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "recipe-headline" },
+              headline
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "recipe-user" },
+              "By ",
+              user.name,
+              " (",
+              user.email,
+              ")"
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "recipe-difficulty" },
+              _react2.default.createElement("i", { className: "fa fa-signal", "aria-hidden": "true" }),
+              " ",
+              "Difficulty:",
+              " ",
+              difficulty
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "recipe-favorites" },
+              _react2.default.createElement("i", { className: "fa fa-heart", "aria-hidden": "true" }),
+              favorites,
+              " ",
+              favorites === 1 ? "favorite" : "favorites",
+              " "
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "p-see-more", onClick: this.handleShowHideMoreInfo },
+              "See",
+              " ",
+              moreInfoVisible ? "Less" : "More",
+              " ",
+              _react2.default.createElement("i", {
+                className: "fa fa-caret-" + (moreInfoVisible ? "up" : "down"),
+                "aria-hidden": "true"
+              })
+            )
+          )
+        ),
+        renderMoreInfo(),
+        _react2.default.createElement(
+          "div",
+          { className: "row" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-12 col-sm-12 col-recipe-divider" },
+            _react2.default.createElement("hr", null)
+          )
+        )
+      );
+    }
+  }]);
+
+  return Recipe;
 }(_react.Component);
 
 exports.default = Recipe;
