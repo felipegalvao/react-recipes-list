@@ -65,27 +65,6 @@ class Recipe extends Component {
       );
     };
 
-    // This function will render a filled or an empty heart
-    const renderFavorite = () => {
-      if (isFavorite === false || isFavorite === undefined) {
-        return (
-          <i
-            className="fa fa-heart-o icon-favorite-recipe"
-            onClick={() => this.props.onFavorite(id)}
-            aria-hidden="true"
-          />
-        );
-      } else {
-        return (
-          <i
-            className="fa fa-heart icon-unfavorite-recipe"
-            onClick={() => this.props.onFavorite(id)}
-            aria-hidden="true"
-          />
-        );
-      }
-    };
-
     // Here will be all the information shown when the user clicks the See More element
     const renderMoreInfo = () => {
       if (moreInfoVisible === true) {
@@ -227,7 +206,11 @@ class Recipe extends Component {
                 <h2>{name}</h2>
               </div>
               <div className="col-1 col-sm-1">
-                {renderFavorite()}
+                <i
+                  className={`fa ${this.props.isFavorite ? "fa-heart icon-unfavorite-recipe" : "fa-heart-o icon-favorite-recipe"}`}
+                  onClick={() => this.props.onFavorite(id)}
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
