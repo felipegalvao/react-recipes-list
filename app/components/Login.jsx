@@ -29,7 +29,7 @@ class Login extends Component {
   };
 
   validateForm = (email, password) => {
-    if (email === "" || email === "") {
+    if (email === "" || password === "") {
       return false;
     } else {
       const re = /\S+@\S+\.\S+/;
